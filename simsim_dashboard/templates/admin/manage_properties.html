@@ -536,16 +536,12 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-group">
 										<div class="btn-group col-md-offset-2">
-											<button onclick="configureLock()" class="btn btn-sm btn-primary">Configure</button>
-											<button onclick="deleteLock()" class="btn btn-sm btn-primary">Delete</button>
+											<button onclick="configureLock()" type="button" class="btn btn-sm btn-primary"> Configure </button>
+											<button onclick="deleteLock()" type="button" class="btn btn-sm btn-primary"> Delete </button>
 										</div>
 									</div>
-									<div class="form-actions">
-										<div class="row">
-											<div class="col-md-offset-5 col-md-7">
-												<button type="submit" class="btn blue">Save Property</button>
-											</div>
-										</div>
+									<div class="form-actions text-center">
+										<button type="submit" class="btn blue"> Save Property </button>
 									</div>
 								</div>
 							</form>
@@ -553,7 +549,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12" style="display: none;" id="lock">
-					<div class="portlet box blue-hoki" id="property">
+					<div class="portlet box blue-hoki">
 						<div class="portlet-title">
 							<div class="caption caption-md">
 								<i class="fa fa-arrow-circle-left" id="back_arrow" onclick="configureLock()"></i>
@@ -566,8 +562,47 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="form-group">
 											<label class="control-label col-md-3">Lock Name</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control" placeholder="name for your lock" name="lock_name">
+												<input type="text" class="form-control" placeholder="DomeFront" name="lock_name">
 											</div>
+										</div>
+										<h4 class="form-section"> <b> Control Lock </b> </h4>
+										<div class="form-group">
+											<label class="control-label col-md-3 col-sm-12"> Status: <span id="lock_status">Locked</span></label>
+											<div>
+												<button type="button" class="btn blue">Unlock</button>
+											</div>
+										</div>
+										<h4 class="form-section"> <b> Setup </b> </h4>
+										<div class="form-group">
+											<label class="control-label col-md-offset-1 col-md-3 col-sm-12"> Power </label>
+											<div class="progress col-md-3 col-sm-12" id="battery-bar">
+  										    	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+											</div>
+										</div>	
+										<p class="form-section" id="rotation-label"> Rotation </p>
+										<div class="form-group">
+											<label class="control-label col-md-offset-1 col-md-3 col-sm-12"> locked angle </label>
+											<div class="col-md-4 col-sm-12">
+												<input type="text" class="form-control" placeholder="40" name="lock-angle">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-md-offset-1 col-md-3 col-sm-12"> unlocked angle </label>
+											<div class="col-md-4 col-sm-12">
+												<input type="text" class="form-control" placeholder="110" name="unlock-angle">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-md-offset-1 col-md-3 col-sm-12" id="direction-label"> Rotation Direction </label>
+											<div class="col-md-4 col-sm-12">
+												<select class="form-control input-xs" name="rot-direction">
+													<option value="cw">Clockwise</option>
+													<option value="ccw">Counterclockwise</option>
+												</select>	
+											</div>
+										</div>
+										<div class="form-actions text-center">
+											<button type="submit" class="btn blue"> Save </button>
 										</div>
 									</div>
 								</form>
