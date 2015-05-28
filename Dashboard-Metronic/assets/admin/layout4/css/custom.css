@@ -17,3 +17,20 @@ Rounded Portlets
 	border-radius: 0px 0px 4px 4px !important;
 }
 */
+
+#back_arrow {
+	font-size: 150%;
+	margin-right: 10px;
+}
+
+#battery-bar {
+	padding: 0;
+	margin: 0 0 0 2em;
+	position: relative;
+	top: 1em;
+}
+
+#rotation-label {
+	font-size: 1.3em;
+	padding-left: 2em;
+}
