@@ -225,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<h4 class="modal-title">Repeat</h4>
 						</div>
 						<div class="modal-body">
-							 <form action="#" class="form-horizontal form-row-sepe">
+							 <form action="#" class="form-horizontal form-row-sepe" name="repeat-form" id="repeat-form">
 								<div class="form-body">
 									<div class="form-group">
 										<label class="control-label col-md-3">Repeats:</label>
@@ -299,7 +299,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-actions">
 										<div class="modal-footer">
-											<button type="submit" class="btn blue"> Done </button>
+											<button type="submit" class="btn blue" data-dismiss="modal"> Done </button>
 											<button type="button" class="btn default" data-dismiss="modal"> Cancel </button>
 										</div>
 									</div>
@@ -374,12 +374,12 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="col-md-2"></div>
 							<div class="scroller" style="height:300px" data-rail-visible="1" data-rail-color="gray" data-handle-color="#a1b2bd">
 								<p>
-									<a href="#portlet-config" data-toggle="modal" class="config"> Sringth 
+									<a href="#"> Sringth 
 									</a>
 									requested <a href="#">305 Ophelia St PA</a> at 04/08/2015 22:15 
 								</p>
 								<p>
-									<a href="#portlet-config" data-toggle="modal" class="config"> Sringth 
+									<a href="#"> Sringth 
 									</a> 
 									requested <a href="#">305 Ophelia St PA</a> at 04/08/2015 22:15 
 								</p>
@@ -461,8 +461,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-group">
 										<div class="col-md-3"></div>
-										<div class="checkbox">
-									      	<label><input type="checkbox" name="repeat"> Repeat </label>
+										<div id="checkbox-wrapper">
+									      	<label><input type="checkbox" name="repeat" class="checkbox" href="#portlet-config" data-toggle="modal" class="config" id="repeat-checkbox"> Repeat </label>
 									    </div>
 									</div>
 									<h4 class="form-section"> How many times? </h4>
@@ -546,7 +546,20 @@ Layout.init(); // init current layout
 Demo.init(); // init demo features
            ComponentsPickers.init();
            ComponentsDropdowns.init();
-        });   
+
+           $('#repeat-checkbox').click(function () {
+           		if ($('#checkbox-wrapper').find('span').hasClass('checked')) {
+           			$('#repeat-checkbox').attr('href','#portlet-config');
+           		}
+           		else {
+           			$('#repeat-checkbox').attr('href', '');
+           		}
+           });  		
+        }); 
+
+        $('#repeat-form').submit(function () {
+        	return false;
+        });
     </script>
 <!-- END JAVASCRIPTS -->
 </body>
