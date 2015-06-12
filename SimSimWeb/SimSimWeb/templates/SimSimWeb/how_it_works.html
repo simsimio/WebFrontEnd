@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{#	<style> #}
+{#        .backimg {#}
+{#            background-image: url("SimSimWeb/img/ocean.png");#}
+{#        }#}
+{#    </style>#}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>How it works.</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    {% load staticfiles %}
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'SimSimWeb/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'SimSimWeb/css/framework.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'SimSimWeb/css/plugins.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'SimSimWeb/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'SimSimWeb/css/howitwork.css' %}">
+    <link rel="shortcut icon" href="{% static 'SimSimWeb/img/favicon.ico' %}" type="image/x-icon">
+	<link rel="icon" href="{% static 'SimSimWeb/img/favicon.ico' %}" type="image/x-icon">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body class="backimg">
+	<header>
+		<div class="wrapper clearfix">
+			<div class="one_fourth remove_bottom logo">
+				<a href="/">
+					<img src="{% static 'SimSimWeb/img/logo.png' %}" alt="logo" class="retina" id="logo"/>
+				</a>
+			</div><!--/one_fourth-->
+			<div class="three_fourths remove_bottom last">
+				<nav>
+					<ul id="selectnav">
+						<li>
+							<a href="/vision" class="scroller">Vision</a>
+						</li>
+                        <li>
+							<a href='/guest_request/' class="scroller">Dashboard</a>
+						</li>
+						<li>
+							<a href="/introduction/" class="scroller">How SimSim works</a>
+						</li>
+						<li>
+							<a href="/login/" class="scroller">Sign in/Sign up</a>
+						</li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+						<li>
+							<a href="#">PreOrder</a>
+						</li>
+					</ul>
+				</nav>
+			</div><!--/three_fourths-->
+		</div><!--/wrapper-->
+	</header><!--/header-->
+
+	<div id="videos">
+		<div class="row">
+			<div class="col-md-6 col-sm-12" id="left-video-wrapper">
+				<h3 class="text-center">Host experience</h3>
+				<div class="text-center">
+					<iframe id="left-video" align="middle" width="500" height="315" src="https://www.youtube.com/embed/hQMbTVRoBVs" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<p class="text-center">Manage your SimSim Lock</p>
+			</div>
+			<div class="col-md-6 col-sm-12" id="right-video-wrapper">
+				<h3 class="text-center">Guest experience</h3>
+				<div class="text-center">
+					<iframe id="right-video" width="500" height="315" src="https://www.youtube.com/embed/1QvAq_svq-Q" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<p class="text-center">Request Access to a SimSim Lock</p>
+			</div>
+		</div>
+	</div>
+
+<!--LOAD SCRIPTS-->
+<script type="text/javascript" src="{% static 'SimSimWeb/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'SimSimWeb/js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'SimSimWeb/js/video.js' %}"></script>
+<script type="text/javascript" src="{% static 'SimSimWeb/js/custom.js' %}"></script>
+</body>
+</html>

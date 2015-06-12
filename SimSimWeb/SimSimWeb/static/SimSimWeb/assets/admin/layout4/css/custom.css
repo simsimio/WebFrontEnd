@@ -1,0 +1,91 @@
+/* here you can put your own css to customize and override the theme */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
+
+/*universal*/
+#logo {
+	width: 50px;
+}
+
+.page-header {
+	/*height: 108px;*/
+	background: #ffffff !important;
+	border-bottom: 1px solid #e5e5e5 !important;
+	box-shadow: 0 1px 1px rgba(100,100,100,0.2), inset 0 1px 0 #fbfbfb !important;
+}
+
+.page-header-inner {
+	margin: 0 5%;
+}
+
+.page-container {
+	/*margin-top: 108px !important;*/
+}
+.page-logo {
+	padding: 15px 0 !important;
+}
+/*unversal end*/
+
+/*login page*/
+#app_links a {
+	font-size: 200%;
+	text-decoration: none;
+}
+
+#login-left .row {
+	height: 100px;
+	margin: 0 60px;
+	margin-top: 80px;
+}
+
+.login-img {
+	height: 100px;
+}
+/*login page end*/
+
+
+#back-arrow {
+	font-size: 150%;
+	margin-right: 10px;
+}
+
+#battery-bar {
+	padding: 0;
+	margin: 0 0 0 2em;
+	position: relative;
+	top: 1em;
+}
+
+#rotation-label {
+	font-size: 1.3em;
+	padding-left: 2em;
+}
+
+.btn-primary {
+	margin-left: 15px;
+}
+
+.btn-group {
+	padding-left: 15px;
+}
+
+#checkbox-wrapper {
+	margin-left: 1em;
+}
+
